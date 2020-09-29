@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Второй документ</title>
+  <meta name="description" content="Второй документ">
+  <link rel="stylesheet" href="css/doc2Styles.css?v=1.0">
+</head>
+
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <div style="background: #CA2D7F;" class="myimgClass" role="Гнев">
+            <span class="tooltiptext">Гнев</span>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </td>
+        <td>
+          <div style="background: #8D4299;" class="myimgClass"  title="Отвращение" role="Отвращение">
+            <span class="tooltiptext">Отвращение</span>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </td>
+        <td>
+          <div style="background: #5FBCF3;" class="myimgClass" role="Печаль">
+            <span class="tooltiptext">Печаль</span>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="background: #70DC96;" class="myimgClass" role="Удивление">
+            <span class="tooltiptext">Удивление</span>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </td>
+        <td>
+          <div style="background: #AEDD4C;" class="myimgClass" role="Ужас">
+            <span class="tooltiptext">Ужас</span>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </td>
+        <td class="black" id="b8">
+          <div style="background: #DAFA50;" class="myimgClass" role="Восхищение">
+            <span class="tooltiptext">Восхищение</span>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <address>
+    <a href="doc3.html">Третий документ</a>
+  </address>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementsByClassName("myimgClass");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    Array.prototype.forEach.call(img, function (element) {
+      element.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = 'img/' + this.role + '.jpg';
+        captionText.innerHTML = this.role;
+      }
+    });
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>

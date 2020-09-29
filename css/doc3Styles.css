@@ -1,0 +1,26 @@
+.head{
+text-align: right;
+color: green;
+font-style: italic;
+}
+.head2{
+    text-align: center;
+    color:rgb(0, 153, 255);
+    font-style: italic;
+    }
+    body{
+        width: 700px;  
+      }
+      
+      p{
+        font-size: 20px;
+        text-indent: 40px;
+      }
+      td:last-child {
+        text-align: right;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+      }
