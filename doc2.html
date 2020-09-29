@@ -14,7 +14,7 @@
     <tbody>
       <tr>
         <td>
-          <div style="background: #CA2D7F;" class="myimgClass" role="Гнев">
+          <div style="background: #CA2D7F;" class="myimgClass" id="Гнев">
             <span class="tooltiptext">Гнев</span>
           </div>
           <div id="myModal" class="modal">
@@ -24,7 +24,7 @@
           </div>
         </td>
         <td>
-          <div style="background: #8D4299;" class="myimgClass"  title="Отвращение" role="Отвращение">
+          <div style="background: #8D4299;" class="myimgClass"  title="Отвращение" id="Отвращение">
             <span class="tooltiptext">Отвращение</span>
           </div>
           <div id="myModal" class="modal">
@@ -34,7 +34,7 @@
           </div>
         </td>
         <td>
-          <div style="background: #5FBCF3;" class="myimgClass" role="Печаль">
+          <div style="background: #5FBCF3;" class="myimgClass" id="Печаль">
             <span class="tooltiptext">Печаль</span>
           </div>
           <div id="myModal" class="modal">
@@ -46,7 +46,7 @@
       </tr>
       <tr>
         <td>
-          <div style="background: #70DC96;" class="myimgClass" role="Удивление">
+          <div style="background: #70DC96;" class="myimgClass" id="Удивление">
             <span class="tooltiptext">Удивление</span>
           </div>
           <div id="myModal" class="modal">
@@ -56,7 +56,7 @@
           </div>
         </td>
         <td>
-          <div style="background: #AEDD4C;" class="myimgClass" role="Ужас">
+          <div style="background: #AEDD4C;" class="myimgClass" id="Ужас">
             <span class="tooltiptext">Ужас</span>
           </div>
           <div id="myModal" class="modal">
@@ -66,7 +66,7 @@
           </div>
         </td>
         <td class="black" id="b8">
-          <div style="background: #DAFA50;" class="myimgClass" role="Восхищение">
+          <div style="background: #DAFA50;" class="myimgClass" id="Восхищение">
             <span class="tooltiptext">Восхищение</span>
           </div>
           <div id="myModal" class="modal">
@@ -92,8 +92,8 @@
     Array.prototype.forEach.call(img, function (element) {
       element.onclick = function () {
         modal.style.display = "block";
-        modalImg.src = 'img/' + this.role + '.jpg';
-        captionText.innerHTML = this.role;
+        modalImg.src = 'img/' + this.id + '.jpg';
+        captionText.innerHTML = this.id;
       }
     });
     var span = document.getElementsByClassName("close")[0];
